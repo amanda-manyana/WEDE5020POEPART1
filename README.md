@@ -6,8 +6,9 @@
 ---
 
 ## 2 Student Information
-- **Student Name:** Amanda Manyana
-- **Student ID:** St10222864
+- Student Name:Amanda Manyana
+- Student ID: St10222864
+- Course/Module:** Diploma in Information Technology in Network Management
 
 
 ---
@@ -71,6 +72,7 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
   - **WhatsApp:** 076 777 5005
   - **Email:** chef29mm@gmail.com
   - **Address:** 148 Don Tsembeyi Street, Sterkspruit, South Africa, 9762
+  - All images were taken from Chef Nyosi social media account on Facebook which is Chef Nyosi.
 
 
 
