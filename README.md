@@ -9,13 +9,12 @@
 - **Student Name:** _Your Name Here_
 - **Student ID:** _Your ID_
 - **Course/Module:** _Course Name_
-- **Instructor:** _Instructor Name_
-- **Submission Date:** _YYYY-MM-DD_
+
 
 ---
 
 ## 3 Project Overview
-This project delivers a lightweight, multi-page website for **SHISA Bakery (Baked Goods by Chef Nyosi)**, founded in 2014 in Sterkspruit, Eastern Cape. The site showcases the bakery’s history, mission and vision, products & services, contact and enquiry options, and working hours. It is built with **plain HTML** (no CSS/JS required) so it’s easy to review, grade, and extend.
+This project delivers a lightweight, multi-page website for **SHISA Bakery (Baked Goods by Chef Nyosi)**, founded in 2014 in Sterkspruit, Eastern Cape. The site showcases the bakery’s history, mission and vision, products & services, contact and enquiry options, and working hours. 
 
 ---
 
@@ -57,7 +56,7 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
 ---
 
 ## 8 Changelog
-- **v1.0.0 — Initial Release**
+- **Initial Release**
   - Added basic HTML pages: Home, About, Products, Contact, Enquiry, Working Hours.
   - Implemented consistent navigation across all pages.
   - Inserted accessible headings and semantic structure.
@@ -73,6 +72,7 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
   - **WhatsApp:** 076 777 5005
   - **Email:** chef29mm@gmail.com
   - **Address:** 148 Don Tsembeyi Street, Sterkspruit, South Africa, 9762
+  - **All images were taken from Chef Nyosi social media account on Facebook which is Chef Nyosi.
 
 
 
