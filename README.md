@@ -6,9 +6,9 @@
 ---
 
 ## 2 Student Information
-- **Student Name:** _Your Name Here_
-- **Student ID:** _Your ID_
-- **Course/Module:** _Course Name_
+- **Student Name:Amanda Manyana
+- **Student ID: St10222864
+- **Course/Module:** Diploma in Information Technology in Network Management
 
 
 ---
