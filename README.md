@@ -34,12 +34,21 @@ Durations (Weeks/ Days)	Milestones
 ![Scones](https://github.com/user-attachments/assets/cf52e141-3c01-43b0-8239-389b00266306
 
 ![Desert](https://github.com/user-attachments/assets/f3659167-8fd7-40d0-8fd9-e88d077ab9bd)
+
 ![Cupcakes](https://github.com/user-attachments/assets/6394429f-385a-4613-89c1-48ef38fb13d1)
+
 ![Cake8](https://github.com/user-attachments/assets/91522594-b9e6-454b-813f-4fd24038c793)
+
 ![Cake7](https://github.com/user-attachments/assets/b24961d7-40c2-4d38-b135-498f1d760754)
+
 ![Cake6](https://github.com/user-attachments/assets/62a5501a-03ae-44d8-8372-ed2fd9b54ea3)
+
 ![Cake5](https://github.com/user-attachments/assets/60bf6012-9698-4594-b0c2-d79b9e0a1b20)
+
 ![Cake4](https://github.com/user-attachments/assets/11ccc462-933c-405a-a3d0-e3baedd05785)
+
 ![Cake3](https://github.com/user-attachments/assets/2a8a0486-5e35-4099-b1f3-9d1c09379aa4)
+
 ![Cake2](https://github.com/user-attachments/assets/a2968313-4886-4e97-9b8c-ba42c0e80479)
+
 ![Cake](https://github.com/user-attachments/assets/6971ff67-d0d1-45ce-840f-3b267d7ed30b)
