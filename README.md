@@ -27,8 +27,12 @@ Durations (Weeks/ Days)	Milestones
  1 Week	Design & development.
  1 ½ Weeks	Testing & feedback.
   3 days	Launch.
+  All the images were taken from Chef Nyosi social media account: https://facebook.com/ChefNyosi
+  Chef Nyosi on Facebook.
+  https://www.facebook.com/share/1CJpJxNCwD/?mibextid=wwXlfr
 
-![Scones](https://github.com/user-attachments/assets/cf52e141-3c01-43b0-8239-389b00266306)
+![Scones](https://github.com/user-attachments/assets/cf52e141-3c01-43b0-8239-389b00266306
+
 ![Desert](https://github.com/user-attachments/assets/f3659167-8fd7-40d0-8fd9-e88d077ab9bd)
 ![Cupcakes](https://github.com/user-attachments/assets/6394429f-385a-4613-89c1-48ef38fb13d1)
 ![Cake8](https://github.com/user-attachments/assets/91522594-b9e6-454b-813f-4fd24038c793)
