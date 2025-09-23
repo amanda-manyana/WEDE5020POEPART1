@@ -1,0 +1,100 @@
+/* SHISA Bakery  */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: "Segoe UI", Tahoma,Georgia, 'Times New Roman', Times, serif, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #d0fffd;
+}
+
+/* Navigation */
+header {
+  background: #c0392b;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Hero Section */
+main section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+button {
+  background: gold;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e74c3c;
+}
+
+/* Footer */
+footer {
+  background: brown;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  main section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+  }
+}
