@@ -1,6 +1,5 @@
 /* Reset styles to ensure consistency across all browers */
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -98,3 +97,36 @@ footer {
     font-size: 1.5rem;
   }
 }
+/* Make all images responsive */
+img {
+  max-width: 100%; /* scales image to container width */
+  height: auto;    /* maintains aspect ratio */
+  display: block;  /* removes inline spacing */
+  margin: 10px 0;  /* optional spacing between images */
+}
+
+/* Optional: style for sections to keep images in a grid */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+section img {
+  flex: 1 1 calc(33% - 15px); /* 3 images per row on large screens */
+  object-fit: cover; /* ensures image fills container without distortion */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 900px) {
+  section img {
+    flex: 1 1 calc(50% - 15px); /* 2 images per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  section img {
+    flex: 1 1 100%; /* 1 image per row on mobile */
+  }
+}
+
