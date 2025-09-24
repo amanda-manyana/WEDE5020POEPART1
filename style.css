@@ -123,10 +123,9 @@ section img {
     flex: 1 1 calc(50% - 15px); /* 2 images per row on tablets */
   }
 }
-
+ 
 @media (max-width: 600px) {
-  section img {
+   section img { 
     flex: 1 1 100%; /* 1 image per row on mobile */
-  }
+   }
 }
-
