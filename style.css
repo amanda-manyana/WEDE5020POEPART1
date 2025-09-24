@@ -102,7 +102,6 @@ img {
   max-width: 100%; /* scales image to container width */
   height: auto;    /* maintains aspect ratio */
   display: block;  /* removes inline spacing */
-  margin: 10px 0;  /* optional spacing between images */
 }
 
 /* Optional: style for sections to keep images in a grid */
