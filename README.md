@@ -87,8 +87,8 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
 Open `index.html` in your browser. Use the navigation menu to browse all pages.
 ## 11 Images from laptop and Mobile Phone
 <img width="1365" height="767" alt="Screenshot 2025-09-24 114538" src="https://github.com/user-attachments/assets/abc95150-8db3-40ce-8cf8-a40d3d7beae2" />
-<img width="1365 height="767" alt="WhatsApp Image 2025-09-24 at 13 11 45_40574b62" src="https://github.com/user-attachments/assets/8eeb3f0d-4c40-4176-b8f6-15082230b16c" />
-![WhatsApp Image 2025-09-24 at 13 11 45_dc91523f](https://github.com/user-attachments/assets/30d667c0-48e1-406d-9ce6-6ce05b51bd60)
+<img width="1253" height="502" alt="WhatsApp Image 2025-09-24 at 13 11 45_40574b62" src="https://github.com/user-attachments/assets/8eeb3f0d-4c40-4176-b8f6-15082230b16c" />
+<img width="1253" height="502" alt="WhatsApp Image 2025-09-24 at 13 11 45_dc91523f" src="https://github.com/user-attachments/assets/30d667c0-48e1-406d-9ce6-6ce05b51bd60" />
 
 
 
