@@ -61,6 +61,10 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
   - Implemented consistent navigation across all pages.
   - Inserted accessible headings and semantic structure.
   - Added non-functional enquiry form placeholders.
+  - PART 2: I created a style.css folder.
+  - Used psuedo-classes and CSS properties.
+  - Added src & srcset to product.html folder along side the all the images and added the size properties.
+  - Applied the typography styles and Linked all my pages to my style.css folder.
 
 
 ---
@@ -73,6 +77,7 @@ This project delivers a lightweight, multi-page website for **SHISA Bakery (Bake
   - **Email:** chef29mm@gmail.com
   - **Address:** 148 Don Tsembeyi Street, Sterkspruit, South Africa, 9762
   - All images were taken from Chef Nyosi social media account on Facebook which is Chef Nyosi.
+  - Screenshots of the website were taken from a laptop and the other from a cellphone.
 
 
 
