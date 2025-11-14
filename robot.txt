@@ -1,0 +1,6 @@
+# robots.txt for SHISA Bakery
+User-agent: *
+Allow: /
+
+# Sitemap - replace with your real domain when deployed
+Sitemap: https://example.com/sitemap.xml
