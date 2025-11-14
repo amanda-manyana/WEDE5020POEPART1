@@ -1,140 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products & Services - SHISA Bakery</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — SHISA Bakery Products & Catering</title>
+  <meta name="description" content="Browse SHISA Bakery's products: custom cakes, cupcakes, pastries and event catering services.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navigation -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="products.html">Products & Services</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="workinghours.html">Working Hours</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <span class="brand">SHISA Bakery</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Products Section -->
   <main>
-    <h1>Our Products & Services</h1>
-
-    <section id="daily-goods">
-      <h2>Daily Baked Goods</h2>
-      <p>Fresh scones, muffins, and cupcakes made daily to ensure freshness and taste.</p>
-
-      <img 
-        src="images/Cupcakes.jpg" 
-        srcset="images/Cupcakes.jpg, 480w images/Cupcakes.jpg 800w, images/Cupcakes.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cupcakes" 
-        height="250" width="220"
-      />
-
-      <img 
-        src="images/Cake8.jpg" 
-        srcset="images/Cake8.jpg 480w, images/Cake8.jpg 800w, images/Cake8.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Muffins" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Scones.jpg" 
-        srcset="images/scones.jpg 480w, images/Scones.jpg 800w, images/Scones.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Scones" 
-        height="250" width="240"
-      />
+    <section class="card container">
+      <h1>Products & Services</h1>
+      <p>Use search to filter our current product list below.</p>
+      <input id="product-search" type="text" placeholder="Search products e.g., cake, pastry">
+      <div id="product-list" class="product-grid" aria-live="polite"></div>
     </section>
 
-    <section id="custom-cakes">
-      <h2>Custom Cakes</h2>
-      <p>Specialty cakes for birthdays, weddings, anniversaries, and cultural ceremonies all tailored to your needs.</p>
-
-      <img 
-        src="images/Cake.jpg" 
-        srcset="images/Cake.jpg 480w, images/Cake.jpg 800w, images/Cake.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cake" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake2.jpg" 
-        srcset="images/Cake2.jpg 480w, images/Cake2.jpg 800w, images/Cake2.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Birthday Cake" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake7.jpg" 
-        srcset="images/Cake7.jpg 480w, images/Cake7.jpg 800w, images/Cake7.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Wedding Cake" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake4.jpg" 
-        srcset="images/Cake4.jpg 480w, images/Cake4.jpg 800w, images/Cake4.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cake" 
-        height="280" width="240"
-      />
+    <section class="card container">
+      <h2>Gallery</h2>
+      <!-- These images should be in images/ folder -->
+      <img src="images/Cake.jpg" class="lightbox-thumb" alt="Classic chocolate cake">
+      <img src="images/Cake6.jpg" class="lightbox-thumb" alt="Wedding cake">
+      <img src="images/Cupcakes.jpg" class="lightbox-thumb" alt="Cupcakes">
     </section>
-
-    <section id="event-catering">
-      <h2>Event Catering</h2>
-      <p>Baked goods and desserts for events, graduations, corporate functions, and other special gatherings.</p>
-
-      <img 
-        src="images/Desert.jpg" 
-        srcset="images/Desert.jpg 480w, images/Desert.jpg 800w, images/Desert.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Desserts" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake3.jpg" 
-        srcset="images/Cake3.jpg 480w, images/Cake3.jpg 800w, images/Cake3.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cake" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake5.jpg" 
-        srcset="images/Cake5.jpg 480w, images/Cake5.jpg 800w, images/Cake5.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cake5" 
-        height="250" width="240"
-      />
-
-      <img 
-        src="images/Cake6.jpg" 
-        srcset="images/Cake6.jpg 480w, images/Cake6.jpg 800w, images/Cake6.jpg 1200w"
-        sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-        alt="Cake" 
-        height="250" width="240"
-      />
-    </section>
-
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 SHISA Bakery. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 SHISA Bakery</p>
+    </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
+

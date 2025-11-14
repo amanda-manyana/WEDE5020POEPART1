@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - SHISA Bakery</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — SHISA Bakery</title>
+  <meta name="description" content="Contact SHISA Bakery for questions, feedback, partnerships or orders.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navigation -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="products.html">Products & Services</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="workinghours.html">Working Hours</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <span class="brand">SHISA Bakery</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Contact Section -->
   <main>
-    <h1>Contact Us</h1>
-    <p>We would love to hear from you. Reach out to us using any of the options below.</p>
+    <section class="card container">
+      <h1>Contact Us</h1>
 
-    <section id="contact-details">
-      <h2>Contact Information</h2>
-      <ul>
-        <li><strong>Mobile:</strong> 071 464 9481</li>
-        <li><strong>WhatsApp:</strong> 076 777 5005</li>
-        <li><strong>Email:</strong> <a href="mailto:chef29mm@gmail.com">chef29mm@gmail.com</a></li>
-        <li><strong>Address:</strong> 148 Don Tsembeyi Street, Sterkspruit, South Africa, 9762</li>
-      </ul>
-    </section>
+      <p><strong>Mobile:</strong> 071 464 9481</p>
+      <p><strong>WhatsApp:</strong> 076 777 5005</p>
+      <p><strong>Email:</strong> chef29mm@gmail.com</p>
+      <p><strong>Address:</strong> 148 Don Tsembeyi Street, Sterkspruit, 9762</p>
 
-    <section id="contact-form">
-      <h2>Send Us a Message</h2>
-      <form action="#" method="post">
-        <label for="name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+      <h2>Send a Message</h2>
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+      <!-- Contact form: set data-endpoint for Formspree if you have it -->
+      <form id="contact-form" action="#" data-endpoint="">
+        <label for="contact-name">Full Name</label>
+        <input id="contact-name" name="name" type="text" required>
 
-        <label for="message">Your Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <label for="contact-email">Email Address</label>
+        <input id="contact-email" name="email" type="email" required>
 
-        <button type="submit">Send</button>
+        <label for="contact-phone">Phone Number</label>
+        <input id="contact-phone" name="phone" type="tel">
+
+        <label for="message-type">Type of Message</label>
+        <select id="message-type" name="type" required>
+          <option value="">-- Select --</option>
+          <option value="General enquiry">General enquiry</option>
+          <option value="Order follow-up">Order follow-up</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Partnership">Partnership</option>
+        </select>
+
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
       </form>
+
+      <h2>Location</h2>
+      <div style="width:100%;height:0;padding-bottom:56%;position:relative">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.966684336453!2d27.36364688885498!3d-30.52612969999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8bc500349954b5%3A0xf554c67222f1ccc5!2sThe%20Spot!5e1!3m2!1sen!2sza!4v1763124080869!5m2!1sen!2sza"></iframe> width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" style="border:0;position:absolute;left:0;top:0;width:100%;height:100%;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 SHISA Bakery. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 SHISA Bakery</p>
+    </div>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
+

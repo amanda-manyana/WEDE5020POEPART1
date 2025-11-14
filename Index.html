@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SHISA Bakery - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SHISA Bakery — Fresh baked goods in Sterkspruit</title>
+  <meta name="description" content="SHISA Bakery — Fresh bread, pastries and custom cakes made in Sterkspruit by Chef Nyosi. Serving Sterkspruit, Bloemfontein, Lady Grey and Aliwal North.">
+  <meta name="keywords" content="SHISA Bakery, Sterkspruit bakery, custom cakes, wedding cakes, Chef Nyosi">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- Navigation -->
+  <!-- Header and navigation -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="products.html">Products & Services</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="workinghours.html">Working Hours</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <span class="brand">SHISA Bakery</span>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="working-hours.html">Hours</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <img src="images/HERO IMAGE.png" alt="SHISA Bakery Hero Image" height="250" width="260"/>
-    <h1>Welcome to SHISA Bakery</h1>
-    <p>
-      The producer of quality and tradition. Founded in 2014 by Chef Nyosi, we are proud to say that our freshly baked goods are made with passion, creativity and excellence. Whether cupcakes and pastries or custom made cakes to celebrate weddings, birthdays and other special occasions, SHISA Bakery is committed to serving Sterkspruit and beyond with products that are not only delicious, but also inspiring.
-    </p>
-    <a href="offers.html">Don't miss these offers</a>
-  </section>
+  <!-- Hero with CTA (button triggers modal) -->
+  <main>
+    <section class="hero card container">
+      <h1>Welcome to SHISA Bakery</h1>
+      <p>Founded in 2014 by Chef Nyosi. Freshly baked goods — from daily pastries to custom celebration cakes.</p>
+      <button class="btn" data-modal-target="#offerModal">Don't miss these offers</button>
+    </section>
 
-  <!-- Footer -->
+    <!-- Product search & dynamic product list (rendered by JS) -->
+    <section class="card container">
+      <h2>Featured Products</h2>
+      <input id="product-search" type="text" placeholder="Search products (e.g., cake, cupcakes...)" aria-label="Search products">
+      <div id="product-list" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- FAQ accordion -->
+    <section class="card container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">Do you deliver to nearby towns?</div>
+      <div class="panel"><p>Yes — we deliver to Bloemfontein, Lady Grey, Aliwal North and local surrounding areas. Delivery fees may apply.</p></div>
+
+      <div class="accordion">How do I order a custom cake?</div>
+      <div class="panel"><p>Use the Enquiry form with date, size, flavour and design notes. We will respond with availability and an estimate.</p></div>
+    </section>
+  </main>
+
+  <!-- Modal for offers -->
+  <div id="offerModal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="close" aria-label="Close modal" onclick="document.getElementById('offerModal').style.display='none'">&times;</button>
+      <h3>Current Offers</h3>
+      <p>Weekend pastry box and 10% off selected celebration cakes for early bookings. Contact us to redeem.</p>
+    </div>
+  </div>
+
   <footer>
-    <p>&copy; 2025 SHISA Bakery. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 SHISA Bakery — 148 Don Tsembeyi Street, Sterkspruit</p>
+    </div>
   </footer>
 
+  <!-- Link to JS (in js folder) -->
+  <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
