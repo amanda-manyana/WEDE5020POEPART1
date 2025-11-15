@@ -106,6 +106,7 @@ Open `index.html` in your browser. Use the navigation menu to browse all pages.
   - For real AJAX form submission replace data-endpoint on contact.html with your Formspree endpoint.
   - Edited my sitemap and robot.txt.
   - Fixed my launcher to display the correct port or server port
+  - Embed a map
 
 
 
