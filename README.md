@@ -102,7 +102,7 @@ Open `index.html` in your browser. Use the navigation menu to browse all pages.
 - Accessibility
   - Keyboard focusable elements, aria-live region for product list, meaningful alt text placeholders for images.
 - Notes:
-  - Images placed in images/ folder — replace placeholders with real photos and descriptive filenames (e.g., wedding-cake-sterkspruit.jpg).
+  - Images placed in images/ folder replaced placeholders with real photos and descriptive filenames (e.g., wedding-cake-sterkspruit.jpg).
   - For real AJAX form submission replace data-endpoint on contact.html with your Formspree endpoint.
   - Edited my sitemap and robot.txt.
   - Fixed my launcher to display the correct port or server port
