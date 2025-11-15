@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/about.html</loc></url>
-  <url><loc>https://example.com/services.html</loc></url>
-  <url><loc>https://example.com/enquiry.html</loc></url>
-  <url><loc>https://example.com/contact.html</loc></url>
-  <url><loc>https://example.com/working-hours.html</loc></url>
+<urlset xmlns="https://github.com/amanda-manyana/WEDE5020POEPART1.git">
+ 
+  <url><loc>http://localhost:5500/aboutus.html</loc></url>
+  <url><loc>http://localhost:5500/product.html</loc></url>
+  <url><loc>http://localhost:5500/enquiry.html/</loc></url>
+  <url><loc>http://localhost:5500/contactus.html</loc></url>
+  <url><loc>http://localhost:5500/workinghours.html</loc></url>
 </urlset>

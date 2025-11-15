@@ -1,4 +1,4 @@
-// Helper selectors
+//Helper selectors
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => Array.from(document.querySelectorAll(s));
 
@@ -284,4 +284,3 @@ function showErrors(form, errors) {
 
   form.prepend(list);
 }
-

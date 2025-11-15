@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap - replace with your real domain when deployed
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://github.com/amanda-manyana/WEDE5020POEPART1.git
+
