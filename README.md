@@ -90,6 +90,24 @@ Open `index.html` in your browser. Use the navigation menu to browse all pages.
 <img width="1364" height="767" alt="WhatsApp Image 2025-09-24 at 13 11 45_40574b62" src="https://github.com/user-attachments/assets/8eeb3f0d-4c40-4176-b8f6-15082230b16c" />
 <img width="1364" height="767" alt="WhatsApp Image 2025-09-24 at 13 11 45_dc91523f" src="https://github.com/user-attachments/assets/30d667c0-48e1-406d-9ce6-6ce05b51bd60" />
 
+### Changelog — Part 3 
+- Implemented JavaScript interactivity:
+  - `js/script.js` added with accordion, modal, image lightbox, dynamic product rendering and search.
+- Dynamic product listing:
+  - `services.html` renders `PRODUCTS` via JS; search input filters products client-side.
+- Form functionality:
+  - `enquiry.html` form validated client-side and simulates an estimate response.
+  - `contact.html` form validated; supports Formspree AJAX (set `data-endpoint`) or fallback to `mailto`.
+- SEO & Crawling:
+  - Title and meta description tags added to main pages.
+  - `robots.txt` and `sitemap.xml` added to the project root.
+- Accessibility & UX:
+  - Keyboard focusable elements, aria-live region for product list, meaningful alt text placeholders for images.
+- Notes:
+  - Images placed in `images/` folder — replace placeholders with real photos and descriptive filenames (e.g., `wedding-cake-sterkspruit.jpg`).
+  - For real AJAX form submission replace `data-endpoint` on `contact.html` with your Formspree endpoint.
+  - Edited my sitemap and robot.txt.
+  - Fixed my launcher to display the correct port or server port
 
 
 
