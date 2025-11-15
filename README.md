@@ -92,20 +92,18 @@ Open `index.html` in your browser. Use the navigation menu to browse all pages.
 
 ### Changelog — Part 3 
 - Implemented JavaScript interactivity:
-  - `js/script.js` added with accordion, modal, image lightbox, dynamic product rendering and search.
-- Dynamic product listing:
-  - `services.html` renders `PRODUCTS` via JS; search input filters products client-side.
+  - js/script.js added with accordion, modal, image lightbox, dynamic product rendering and search.
+  - services.html renders PRODUCTS via JS; search input filters products client-side.
 - Form functionality:
-  - `enquiry.html` form validated client-side and simulates an estimate response.
-  - `contact.html` form validated; supports Formspree AJAX (set `data-endpoint`) or fallback to `mailto`.
-- SEO & Crawling:
+  - enquiry.html form validated client-side and simulates an estimate response.
+  - contact.html form validated
   - Title and meta description tags added to main pages.
-  - `robots.txt` and `sitemap.xml` added to the project root.
-- Accessibility & UX:
+  - robots.txt and sitemap.xml added to the project root.
+- Accessibility
   - Keyboard focusable elements, aria-live region for product list, meaningful alt text placeholders for images.
 - Notes:
-  - Images placed in `images/` folder — replace placeholders with real photos and descriptive filenames (e.g., `wedding-cake-sterkspruit.jpg`).
-  - For real AJAX form submission replace `data-endpoint` on `contact.html` with your Formspree endpoint.
+  - Images placed in images/ folder — replace placeholders with real photos and descriptive filenames (e.g., wedding-cake-sterkspruit.jpg).
+  - For real AJAX form submission replace data-endpoint on contact.html with your Formspree endpoint.
   - Edited my sitemap and robot.txt.
   - Fixed my launcher to display the correct port or server port
 
