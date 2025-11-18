@@ -1,286 +1,122 @@
-//Helper selectors
-const $ = (s) => document.querySelector(s);
-const $$ = (s) => Array.from(document.querySelectorAll(s));
+// -----------------------------
+// SHISA Bakery – Form Validation
+// -----------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
-  initAccordions();
-  initModals();
-  initLightbox();
-  loadProducts(PRODUCTS);
-  initSearch();
-  setupForms();
-});
+// ENQUIRY FORM VALIDATION
+function validateEnquiryForm(event) {
+    event.preventDefault(); // Stop form from submitting
 
-/* ------------------------------
-   Accordion
------------------------------- */
-function initAccordions() {
-  $$(".accordion").forEach((acc) => {
-    acc.addEventListener("click", () => {
-      const panel = acc.nextElementSibling;
-      if (!panel) return;
-      panel.style.display = panel.style.display === "block" ? "none" : "block";
-    });
-  });
-}
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(e => e.textContent = '');
 
-/* ------------------------------
-   Modal
------------------------------- */
-function initModals() {
-  $$("[data-modal-target]").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const id = btn.getAttribute("data-modal-target");
-      const modal = document.querySelector(id);
-      if (modal) modal.style.display = "flex";
-    });
-  });
+    let isValid = true;
 
-  $$(".modal .close").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      btn.closest(".modal").style.display = "none";
-    });
-  });
+    // Collect form values
+    const fullName = document.getElementById('enquiryName').value.trim();
+    const email = document.getElementById('enquiryEmail').value.trim();
+    const phone = document.getElementById('enquiryPhone').value.trim();
+    const service = document.getElementById('enquiryService').value;
+    const details = document.getElementById('enquiryDetails').value.trim();
 
-  $$(".modal").forEach((modal) => {
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    });
-  });
-}
+    // Email format check  
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/* ------------------------------
-   Lightbox
------------------------------- */
-function initLightbox() {
-  let overlay = document.querySelector(".lightbox-overlay");
+    // Phone number check (10 digits)
+    const phoneRegex = /^[0-9]{10}$/;
 
-  if (!overlay) {
-    overlay = document.createElement("div");
-    overlay.className = "lightbox-overlay";
-    overlay.innerHTML = `<img src="" alt="">`;
-    document.body.appendChild(overlay);
-
-    overlay.addEventListener("click", () => {
-      overlay.style.display = "none";
-    });
-  }
-
-  const overlayImg = overlay.querySelector("img");
-
-  $$(".lightbox-thumb").forEach((img) => {
-    img.addEventListener("click", () => {
-      overlayImg.src = img.dataset.large || img.src;
-      overlay.style.display = "flex";
-    });
-  });
-}
-
-/* ------------------------------
-   Dynamic product loading
------------------------------- */
-const PRODUCTS = [
-  { id: 1, title: "Classic Chocolate Cake", category: "cakes", price: 450, short: "Rich chocolate sponge with ganache", img: "images/cake1.jpg" },
-  { id: 2, title: "Vanilla Cupcakes (6)", category: "cupcakes", price: 120, short: "Soft vanilla cupcakes with buttercream", img: "images/cupcakes.jpg" },
-  { id: 3, title: "Wedding Tier Cake", category: "cakes", price: 2200, short: "Two-tier custom wedding cake", img: "images/wedding1.jpg" },
-  { id: 4, title: "Assorted Pastries Box", category: "pastries", price: 220, short: "Box of mixed pastries", img: "images/pastries.jpg" },
-];
-
-function loadProducts(list) {
-  const container = $("#product-list");
-  if (!container) return;
-
-  container.innerHTML = list
-    .map((p) => {
-      return `
-        <div class="product-card">
-          <img class="lightbox-thumb" src="${p.img}" data-large="${p.img}" alt="${p.title}">
-          <h3>${p.title}</h3>
-          <p>${p.short}</p>
-          <p><strong>From R${p.price}</strong></p>
-          <button class="btn btn-enquire" data-id="${p.id}">Enquire</button>
-        </div>
-      `;
-    })
-    .join("");
-
-  initLightbox();
-
-  $$(".btn-enquire").forEach((btn) => {
-    btn.addEventListener("click", handleProductEnquiry);
-  });
-}
-
-/* ------------------------------
-   Search bar for products
------------------------------- */
-function initSearch() {
-  const search = $("#product-search");
-  if (!search) return;
-
-  search.addEventListener("input", (e) => {
-    const q = e.target.value.toLowerCase().trim();
-    const filtered = PRODUCTS.filter(
-      (p) =>
-        p.title.toLowerCase().includes(q) ||
-        p.category.toLowerCase().includes(q) ||
-        p.short.toLowerCase().includes(q)
-    );
-    loadProducts(filtered);
-  });
-}
-
-/* ------------------------------
-   Enquire from product button
------------------------------- */
-function handleProductEnquiry(e) {
-  const id = e.target.dataset.id;
-  const item = PRODUCTS.find((p) => p.id == id);
-
-  if (!item) return;
-
-  if ($("#service")) {
-    $("#service").value = item.category;
-    $("#message").value = `I would like to enquire about: ${item.title} (starting at R${item.price}).`;
-    $("#message").scrollIntoView({ behavior: "smooth" });
-  } else {
-    if (confirm("Open the enquiry page?")) {
-      location.href = "enquiry.html";
+    // -----------------------------
+    // Validation
+    // -----------------------------
+    if (fullName === "") {
+        document.getElementById('enquiryNameError').textContent = "Please enter your full name.";
+        isValid = false;
     }
-  }
+
+    if (!emailRegex.test(email)) {
+        document.getElementById('enquiryEmailError').textContent = "Enter a valid email address.";
+        isValid = false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+        document.getElementById('enquiryPhoneError').textContent = "Phone number must be 10 digits.";
+        isValid = false;
+    }
+
+    if (service === "") {
+        document.getElementById('enquiryServiceError').textContent = "Please select a service.";
+        isValid = false;
+    }
+
+    if (details.length < 10) {
+        document.getElementById('enquiryDetailsError').textContent = "Please provide more details (min 10 characters).";
+        isValid = false;
+    }
+
+    // -----------------------------
+    // If form is valid → show estimate message
+    // -----------------------------
+    if (isValid) {
+        const output = document.getElementById('enquiryOutput');
+        output.style.color = "green";
+        output.innerHTML = `
+            Thank you, <strong>${fullName}</strong>!<br>
+            Your enquiry for <strong>${service}</strong> has been received.<br><br>
+            We will contact you shortly at <strong>${email}</strong> or <strong>${phone}</strong>.
+        `;
+    }
 }
 
-/* ------------------------------
-   Form validation + handling
------------------------------- */
-function setupForms() {
-  const enquiryForm = $("#enquiry-form");
-  if (enquiryForm) enquiryForm.addEventListener("submit", handleEnquirySubmit);
 
-  const contactForm = $("#contact-form");
-  if (contactForm) contactForm.addEventListener("submit", handleContactSubmit);
-}
 
-/* ------------------------------
-   Enquiry form
------------------------------- */
-function handleEnquirySubmit(e) {
-  e.preventDefault();
-  const form = e.target;
+// CONTACT FORM VALIDATION
+function validateContactForm(event) {
+    event.preventDefault();
 
-  const name = form.querySelector("#enq-name").value.trim();
-  const email = form.querySelector("#enq-email").value.trim();
-  const phone = form.querySelector("#enq-phone").value.trim();
-  const message = form.querySelector("#message").value.trim();
-  const service = form.querySelector("#service").value;
+    document.querySelectorAll('.error').forEach(e => e.textContent = '');
 
-  const errors = [];
+    let isValid = true;
 
-  if (name.length < 2) errors.push("Please enter your full name.");
-  if (!validateEmail(email)) errors.push("Enter a valid email.");
-  if (message.length < 10) errors.push("Message must be at least 10 characters.");
+    const fullName = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    const messageType = document.getElementById('contactType').value;
+    const message = document.getElementById('contactMessage').value.trim();
 
-  showErrors(form, errors);
-  if (errors.length) return;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
 
-  let base = 250;
-  const match = PRODUCTS.find((p) =>
-    message.toLowerCase().includes(p.title.toLowerCase())
-  );
-  if (match) base = match.price;
+    if (fullName === "") {
+        document.getElementById('contactNameError').textContent = "Please enter your name.";
+        isValid = false;
+    }
 
-  const urgent = /urgent|asap/i.test(message) ? 1.25 : 1;
-  const estimate = Math.round(base * urgent);
+    if (!emailRegex.test(email)) {
+        document.getElementById('contactEmailError').textContent = "Enter a valid email.";
+        isValid = false;
+    }
 
-  const result = document.createElement("div");
-  result.className = "result-box";
-  result.innerHTML = `
-    <h3>Enquiry Received</h3>
-    <p>Thank you <strong>${name}</strong>.</p>
-    <p>Estimated price: <strong>R${estimate}</strong></p>
-    <p>We will get back to you at <strong>${email}</strong>.</p>
-  `;
+    if (!phoneRegex.test(phone)) {
+        document.getElementById('contactPhoneError').textContent = "Phone number must be 10 digits.";
+        isValid = false;
+    }
 
-  const old = form.parentNode.querySelector(".result-box");
-  if (old) old.remove();
+    if (messageType === "") {
+        document.getElementById('contactTypeError').textContent = "Select message type.";
+        isValid = false;
+    }
 
-  form.parentNode.appendChild(result);
-  form.reset();
-}
+    if (message.length < 10) {
+        document.getElementById('contactMessageError').textContent = "Message must be at least 10 characters.";
+        isValid = false;
+    }
 
-/* ------------------------------
-   Contact form
------------------------------- */
-function handleContactSubmit(e) {
-  e.preventDefault();
-
-  const form = e.target;
-
-  const name = form.querySelector("#contact-name").value.trim();
-  const email = form.querySelector("#contact-email").value.trim();
-  const type = form.querySelector("#message-type").value.trim();
-  const message = form.querySelector("#contact-message").value.trim();
-  const phone = form.querySelector("#contact-phone").value.trim();
-
-  const errors = [];
-
-  if (name.length < 2) errors.push("Enter your name.");
-  if (!validateEmail(email)) errors.push("Enter a valid email address.");
-  if (!type) errors.push("Select a message type.");
-  if (message.length < 5) errors.push("Your message is too short.");
-
-  showErrors(form, errors);
-  if (errors.length) return;
-
-  const endpoint = form.dataset.endpoint;
-
-  if (endpoint) {
-    fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({ name, email, phone, type, message }),
-    })
-      .then((res) => {
-        if (res.ok) {
-          const done = document.createElement("div");
-          done.className = "result-box";
-          done.textContent = "Message sent successfully. Thank you!";
-          form.parentNode.appendChild(done);
-          form.reset();
-        } else {
-          alert("There was an error sending your message.");
-        }
-      })
-      .catch(() => {
-        alert("Network error. Please try again.");
-      });
-  } else {
-    const to = "chef29mm@gmail.com";
-    const subject = encodeURIComponent(type + " - " + name);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`
-    );
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-  }
-}
-
-/* ------------------------------
-   Utility
------------------------------- */
-function validateEmail(e) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
-}
-
-function showErrors(form, errors) {
-  const box = form.querySelector(".form-errors");
-  if (box) box.remove();
-
-  if (!errors.length) return;
-
-  const list = document.createElement("div");
-  list.className = "form-errors";
-  list.innerHTML = "<ul>" + errors.map((e) => `<li>${e}</li>`).join("") + "</ul>";
-
-  form.prepend(list);
+    if (isValid) {
+        const output = document.getElementById('contactOutput');
+        output.style.color = "green";
+        output.innerHTML = `
+            Thank you, <strong>${fullName}</strong>!<br>
+            Your message regarding <strong>${messageType}</strong> has been sent.<br>
+            We will respond to <strong>${email}</strong>.
+        `;
+    }
 }
